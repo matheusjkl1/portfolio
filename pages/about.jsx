@@ -1,10 +1,10 @@
 import React from 'react';
 import Navbar from '../components/navbar';
-// import Link from 'next/link';
+import 'bulma/css/bulma.css';
 
 export default function About() {
   return (
-    <div>
+    <div className="container">
       <Navbar />
     </div>
   );

@@ -1,7 +1,7 @@
 /* eslint-disable no-underscore-dangle */
 import React, { useState } from 'react';
-import api from '../services/api';
-// import style from './create.module.css';
+import { api } from '../services/api';
+import Navbar from '../components/navbar';
 import 'bulma/css/bulma.css';
 
 export default function Create() {
@@ -41,6 +41,7 @@ export default function Create() {
   // className={style.centralize}
   return (
     <div className="container">
+      <Navbar />
       <form className="box">
         <label htmlFor="name" className="label">
           <input

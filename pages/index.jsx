@@ -1,11 +1,11 @@
 import React from 'react';
 import Navbar from '../components/navbar';
 import Content from '../components/content';
-// import Link from 'next/link';
+import 'bulma/css/bulma.css';
 
 export default function Home() {
   return (
-    <div>
+    <div className="container">
       <Navbar />
       <Content />
     </div>

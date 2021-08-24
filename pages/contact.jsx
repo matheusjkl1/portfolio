@@ -1,9 +1,11 @@
 import React from 'react';
 import Navbar from '../components/navbar';
-// import Link from 'next/link';
+import 'bulma/css/bulma.css';
 
 export default function Contact() {
   return (
-    <Navbar />
+    <div className="container">
+      <Navbar />
+    </div>
   );
 }
