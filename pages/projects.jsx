@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import React, { useEffect, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import Navbar from '../components/navbar';
@@ -13,10 +14,10 @@ export default function Projects() {
   useEffect(() => {
     api.get('/projects')
       .then((response) => setPorjects(response.data))
-      .catch((err) => (err));
+      .catch((err) => console.error(err));
     setLoading(false);
   }, [loading]);
-  // console.log(projects);
+  console.log(apiUrl);
   return (
     <div className="container">
       <Navbar path="/projects" />
