@@ -5,7 +5,7 @@ import 'bulma/css/bulma.css';
 export default function Contact() {
   return (
     <div className="container">
-      <Navbar />
+      <Navbar path="/contact" />
     </div>
   );
 }

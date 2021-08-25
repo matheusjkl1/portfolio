@@ -6,7 +6,7 @@ import 'bulma/css/bulma.css';
 
 export default function Create() {
   const [loginState, setLoginState] = useState({
-    name: '', gitUrl: '', sinopse: '', file: '',
+    name: '', gitUrl: '', sinopse: '', file: '', url: '',
   });
   // const [file, setFile] = useState('');
   const [data, setData] = useState([]);
@@ -18,16 +18,16 @@ export default function Create() {
 
   const fileSelectedHandle = ({ target }) => {
     const { name, files } = target;
-    // setFile(files[0]);
     setLoginState({ ...loginState, [name]: files[0] });
   };
 
   const createProject = async () => {
     const fd = new FormData();
     fd.append('name', loginState.name);
+    fd.append('file', loginState.file);
+    fd.append('file', loginState.url);
     fd.append('gitUrl', loginState.gitUrl);
     fd.append('sinopse', loginState.sinopse);
-    fd.append('file', loginState.file);
     api
       .post('/projects', fd,
         {
@@ -38,7 +38,6 @@ export default function Create() {
       .then((response) => setData(JSON.stringify(response.data)))
       .catch((err) => (err));
   };
-  // className={style.centralize}
   return (
     <div className="container">
       <Navbar />
@@ -50,6 +49,16 @@ export default function Create() {
             id="name"
             name="name"
             placeholder="Name"
+            onChange={handleChange}
+          />
+        </label>
+        <label htmlFor="url" className="label">
+          <input
+            className="input is-success"
+            type="text"
+            id="url"
+            name="url"
+            placeholder="Url do Projeto"
             onChange={handleChange}
           />
         </label>

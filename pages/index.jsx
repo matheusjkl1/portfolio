@@ -6,7 +6,7 @@ import 'bulma/css/bulma.css';
 export default function Home() {
   return (
     <div className="container">
-      <Navbar />
+      <Navbar path="/" />
       <Content />
     </div>
   );
