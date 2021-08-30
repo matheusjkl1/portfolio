@@ -17,6 +17,9 @@ export default function Projects() {
       .catch((err) => console.error(err));
     setLoading(false);
   }, [loading]);
+
+  console.log(projects);
+
   return (
     <div className="container">
       <Navbar path="/projects" />
@@ -50,12 +53,14 @@ export default function Projects() {
                         </div>
                         <div className="media-content">
                           <p className="title is-4">{project.name}</p>
-                          <a href={project.gitUrl} target="_blank" rel="noreferrer">
+                          <a href={project.url} target="_blank" rel="noreferrer">
                             <p className="subtitle is-6">
-                              <span className="tag is-link is-light">Url do repositorio:</span>
+                              <span className="tag is-link is-light">Url do Projeto:</span>
                               &nbsp;&nbsp;
                               {project.url}
                             </p>
+                          </a>
+                          <a href={project.gitUrl} target="_blank" rel="noreferrer">
                             <p className="subtitle is-6">
                               <span className="tag is-link is-light">Url do repositorio:</span>
                               &nbsp;&nbsp;
