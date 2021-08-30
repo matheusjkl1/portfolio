@@ -17,7 +17,6 @@ export default function Projects() {
       .catch((err) => console.error(err));
     setLoading(false);
   }, [loading]);
-  console.log(apiUrl);
   return (
     <div className="container">
       <Navbar path="/projects" />
@@ -34,8 +33,6 @@ export default function Projects() {
                     <div className="card-image project-card">
                       <figure className="image project-card">
                         <img
-                          // width="480"
-                          // height="480"
                           src={`${apiUrl}${project.img}`}
                           alt={project.name}
                         />

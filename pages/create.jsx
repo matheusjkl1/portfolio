@@ -25,7 +25,7 @@ export default function Create() {
     const fd = new FormData();
     fd.append('name', loginState.name);
     fd.append('file', loginState.file);
-    fd.append('file', loginState.url);
+    fd.append('url', loginState.url);
     fd.append('gitUrl', loginState.gitUrl);
     fd.append('sinopse', loginState.sinopse);
     api
