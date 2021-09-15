@@ -1,0 +1,7 @@
+.body {
+  background: white;
+  color: var(--foreground);
+  padding-top: 1em;
+  padding-left: 3em;
+  padding-right: 3em;
+}
