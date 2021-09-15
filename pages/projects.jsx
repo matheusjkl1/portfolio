@@ -1,10 +1,11 @@
 /* eslint-disable no-console */
 import React, { useEffect, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import Navbar from '../components/navbar';
 import { api, apiUrl } from '../services/api';
-import 'bulma/css/bulma.css';
+import Navbar from '../components/navbar';
+import Banner from '../components/banner';
 import Loading from '../components/loading';
+import 'bulma/css/bulma.css';
 import './project.module.css';
 
 export default function Projects() {
@@ -18,11 +19,15 @@ export default function Projects() {
     setLoading(false);
   }, [loading]);
 
-  console.log(projects);
-
   return (
     <div className="container">
       <Navbar path="/projects" />
+      <div className="project--header">
+        <div className="project--header--project">Auto</div>
+        <div className="project--header--img">
+          <Banner />
+        </div>
+      </div>
       <section className="box">
         {loading ? <Loading />
           : (
