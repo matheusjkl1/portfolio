@@ -21,10 +21,7 @@ export default function Home() {
           )}
           pTxt={(
             <p>
-              Sou um engenheiro de criação que constrói experiências
-              maravilhosas na web. Posso aconselhar sua empresa sobre
-              a plataforma da web , desempenho, interações criativas
-              do usuário e aprendizado de máquina utilizável.
+              Sou um desenvolvvedor FullStack.
             </p>
           )}
           imgTest={bannerPic}
@@ -33,12 +30,13 @@ export default function Home() {
       />
       <article className={`box ${styles.homeArticle}`}>
         <p>
-          I've just ended an 8 year stint as a Senior Engineer
-          at Google, where I worked on making music and art and
-          all sorts of creative interactions with Machine Learning,
-          web components and web standards, and the guts of Chromium.
-          You can read a bit more about me and my past work. Most of
-          my personal code is on GitHub or on Glitch.
+          O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão.
+          O Lorem Ipsum tem vindo a ser o texto
+          padrão usado por estas indústrias desde o ano de 1500,
+          quando uma misturou os caracteres de um texto para criar um espécime de livro.
+          Este texto não só sobreviveu 5 séculos,
+          mas também o salto para a tipografia electrónica,
+          mantendo-se essencialmente inalterada.
         </p>
       </article>
       <main className={`box ${styles.homeMainContent}`}>
@@ -49,11 +47,7 @@ export default function Home() {
           Eu construo projetos paralelos muito pequenos
           (mas bonitos, eu acho!) Que são uma tentativa de "arte",
           ou são algo que eu preciso na minha vida e não consigo
-          encontrar em outro lugar (como praticar escrita ASL,
-          acordes de ukulele, ou uhhhh entender o tempo mantendo
-          em JavaScript).
-          Às vezes também dou palestras em conferências,
-          embora a pandemia tenha realmente afetado isso.
+          encontrar em outro lugar.
         </p>
       </main>
     </div>

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-// import styles from './navbar.module.css';
 import { useRouter } from 'next/router';
 
 import PropTypes from 'prop-types';
@@ -11,36 +10,34 @@ export default function Navbar({ path }) {
     '/': '/', '/about': '', '/projects': '', '/contact': '',
   });
   const route = useRouter();
-  // onClick={() => setIsActive(true)}
+
   useEffect(() => {
     if (route.asPath === path) setIsActive({ [path]: path });
   }, []);
   return (
-    <nav>
-      <div className="tabs is-centered">
-        <ul>
-          <li className={`${route.asPath === isActive['/'] ? 'is-active' : ''}`}>
-            <Link href="/">
-              <a href="/" onClick={() => setIsActive({ '/': '/' })}>Home</a>
-            </Link>
-          </li>
-          <li className={`${route.asPath === isActive['/about'] ? 'is-active' : ''}`}>
-            <Link href="/about">
-              <a href="/about" onClick={() => setIsActive({ '/about': '/about' })}>Sobre</a>
-            </Link>
-          </li>
-          <li className={`${route.asPath === isActive['/projects'] ? 'is-active' : ''}`}>
-            <Link href="/projects">
-              <a href="/projects" onClick={() => setIsActive({ '/projects': '/projects' })}>Projetos</a>
-            </Link>
-          </li>
-          <li className={`${route.asPath === isActive['/contact'] ? 'is-active' : ''}`}>
-            <Link href="/contact">
-              <a href="/contact" onClick={() => setIsActive({ '/contact': '/contact' })}>Contato</a>
-            </Link>
-          </li>
-        </ul>
-      </div>
+    <nav className="tabs is-centered">
+      <ul>
+        <li className={`${route.asPath === isActive['/'] ? 'is-active' : ''}`}>
+          <Link href="/">
+            <a href="/" onClick={() => setIsActive({ '/': '/' })}>Home</a>
+          </Link>
+        </li>
+        <li className={`${route.asPath === isActive['/about'] ? 'is-active' : ''}`}>
+          <Link href="/about">
+            <a href="/about" onClick={() => setIsActive({ '/about': '/about' })}>Sobre</a>
+          </Link>
+        </li>
+        <li className={`${route.asPath === isActive['/projects'] ? 'is-active' : ''}`}>
+          <Link href="/projects">
+            <a href="/projects" onClick={() => setIsActive({ '/projects': '/projects' })}>Projetos</a>
+          </Link>
+        </li>
+        <li className={`${route.asPath === isActive['/contact'] ? 'is-active' : ''}`}>
+          <Link href="/contact">
+            <a href="/contact" onClick={() => setIsActive({ '/contact': '/contact' })}>Contato</a>
+          </Link>
+        </li>
+      </ul>
     </nav>
   );
 }

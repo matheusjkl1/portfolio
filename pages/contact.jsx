@@ -14,8 +14,7 @@ export default function Contact() {
         <Content
           h1Txt={(
             <h1>
-              Meus Projetos
-              {'<3'}
+              Contatos
             </h1>
           )}
           pTxt={<p>😢 😭 😤 😠 😡 🤬 🤯 😳 🥵 🥶 😱 😨 😰 😥 😓</p>}
