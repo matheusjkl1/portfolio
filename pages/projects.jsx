@@ -5,6 +5,7 @@ import Banner from '../components/banner';
 import Content from '../components/content';
 import bannerPic from '../images/1.png';
 import Card from '../components/projectCard';
+// import styles from './projects.module.css';
 import stylesPages from './pages.module.css';
 import 'bulma/css/bulma.css';
 

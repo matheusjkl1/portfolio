@@ -6,9 +6,10 @@
 }
 
 .sectionTitle {
-  max-width: 37%;
-  min-height: 400px;
+  min-height: 390px;
   max-height: 400px;
+  min-width: 370px;
+  max-width: 370px;
 }
 
 .sectionTitle h1 {
