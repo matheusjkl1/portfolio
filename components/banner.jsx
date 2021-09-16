@@ -1,11 +1,12 @@
 import React from 'react';
-import Image from 'next/image';
-import profilePic1 from '../images/1.png';
+import 'bulma/css/bulma.css';
 
-export default function banner() {
+export default function banner({ bannerContent }) {
   return (
     <div>
-      <Image src={profilePic1} />
+      <div>
+        { bannerContent }
+      </div>
     </div>
   );
 }
