@@ -21,7 +21,7 @@ export default function Home() {
           )}
           pTxt={(
             <p>
-              Sou um desenvolvvedor FullStack.
+              Sou um desenvolvedor FullStack.
             </p>
           )}
           imgTest={bannerPic}
