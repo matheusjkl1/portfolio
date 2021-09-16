@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { api, apiUrl } from '../services/api';
 import Loading from './loading';
+import styles from './projectCard.module.css';
 
 export default function projectCard() {
   const [loading, setLoading] = useState(true);
@@ -16,7 +17,7 @@ export default function projectCard() {
   }, [loading]);
 
   return (
-    <section className="box">
+    <section className={`box ${styles.cardMainContent}`}>
       {loading ? <Loading />
         : (
           <div

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-
 import PropTypes from 'prop-types';
 import 'bulma/css/bulma.css';
 
