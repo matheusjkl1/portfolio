@@ -3,7 +3,7 @@ import React from 'react';
 import Navbar from '../components/navbar';
 import Banner from '../components/banner';
 import Content from '../components/content';
-import bannerPic from '../images/1.png';
+import bannerPic from '../images/arts/home.png';
 import 'bulma/css/bulma.css';
 import styles from './home.module.css';
 import stylesPages from './pages.module.css';

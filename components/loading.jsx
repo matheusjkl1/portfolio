@@ -1,10 +1,10 @@
 import React from 'react';
-import 'bulma/css/bulma.css';
+import styles from './loading.module.css';
 
 export default function Loading() {
   return (
-    <div>
-      <progress className="progress is-small is-primary" max="100">15%</progress>
+    <div className={`${styles.loadingDiv}`}>
+      <progress className="progress is-medium is-dark" />
     </div>
   );
 }

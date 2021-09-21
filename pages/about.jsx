@@ -2,7 +2,7 @@
 import React from 'react';
 import Navbar from '../components/navbar';
 import Banner from '../components/banner';
-import bannerPic from '../images/1.png';
+import bannerPic from '../images/arts/about.png';
 import Content from '../components/content';
 import styles from './about.module.css';
 import stylesPages from './pages.module.css';
@@ -15,7 +15,7 @@ export default function About() {
       <Banner bannerContent={(
         <Content
           h1Txt={<h1>Sobre mim</h1>}
-          pTxt={<p>😳 😳 😳 😳</p>}
+          pTxt={<p>📚</p>}
           imgTest={bannerPic}
         />
       )}
