@@ -2,6 +2,39 @@
   margin-top: 5em;
   min-height: 30em;
   margin-bottom: 4em;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  align-content: center;
+}
+
+@media screen and (max-width: 1420px) {
+  .contactMainContent {
+    margin-top: 5em;
+    min-height: 30em;
+    margin-bottom: 4em;
+    display: block;
+  }
+  .contactSectionContent {
+    align-items:center;
+    align-content: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 1em;
+    min-width: 50%;
+    max-height: 25em;
+  }
+  .contactSectionContentForms {
+    min-width: 50%;
+    max-height: 25em;
+    margin: 1em;
+  }
+  
+  .contactSectionContent a{
+    color: inherit;
+    text-align: center;
+  }
 }
 
 .contactSectionContent {
@@ -10,9 +43,15 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  margin-top: 5em;
-  min-height: 10em;
-  margin-bottom: 4em;
+  margin: 1em;
+  min-width: 50%;
+  max-height: 25em;
+}
+
+.contactSectionContentForms {
+  min-width: 50%;
+  max-height: 25em;
+  margin: 1em;
 }
 
 .contactSectionContent a{
