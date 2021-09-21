@@ -88,9 +88,9 @@ export default function Contact() {
       )}
       />
       <main className={`box ${styles.contactMainContent}`}>
-        <section className={`box ${styles.contactSectionContentForms}`}>
+        <section className={`${styles.contactSectionContentForms}`}>
           <h1>Deseja me enviar um Email?</h1>
-          <form className="box" ref={form} onSubmit={sendEmail}>
+          <form ref={form} onSubmit={sendEmail}>
             <label className="label">
               <input
                 type="text"
@@ -129,7 +129,7 @@ export default function Contact() {
           </form>
           {formState || null}
         </section>
-        <section className={`box ${styles.contactSectionContent} is-variable is-1-mobile is-0-tablet is-3-desktop is-8-widescreen is-2-fullhd`}>
+        <section className={`${styles.contactSectionContent} is-variable is-1-mobile is-0-tablet is-3-desktop is-8-widescreen is-2-fullhd`}>
           <a href="https://github.com/matheusjkl1" target="_blank" rel="noreferrer">
             <figure className="image is-64x64 column">
               <Image src={gitIco} />
