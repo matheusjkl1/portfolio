@@ -6,19 +6,20 @@ import Loading from './loading';
 import styles from './projectCard.module.css';
 
 export default function projectCard() {
-  const [loading, setLoading] = useState(true);
   const [projects, setPorjects] = useState([]);
 
   useEffect(() => {
-    api.get('/projects')
-      .then((response) => setPorjects(response.data))
-      .catch((err) => console.error(err));
-    setLoading(false);
-  }, [loading]);
-
+    try {
+      api.get('/projects')
+        .then((response) => setPorjects(response.data))
+        .catch((err) => console.error(err));
+    } catch (error) {
+      console.log(error);
+    }
+  }, []);
   return (
     <section className={`box ${styles.cardMainContent}`}>
-      {loading ? <Loading />
+      {projects.length <= 0 ? <Loading />
         : (
           <div
             key={uuidv4()}
