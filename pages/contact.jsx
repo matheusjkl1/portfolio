@@ -109,7 +109,7 @@ export default function Contact() {
       </section>
       <main className={`box ${styles.contactMainContent}`}>
         <h1>Deseja me enviar um Email?</h1>
-        <form className="box" ref={form} onSubmit={sendEmail}>
+        <form ref={form} onSubmit={sendEmail}>
           <label className="label">
             <input
               type="text"
