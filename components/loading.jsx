@@ -1,9 +1,10 @@
 import React from 'react';
-import styles from './loading.module.css';
+import styles from './css/loading.module.css';
+import 'bulma/css/bulma.css';
 
 export default function Loading() {
   return (
-    <div className={`${styles.loadingDiv}`}>
+    <div className={`box ${styles.loadingDiv}`}>
       <progress className="progress is-medium is-dark" />
     </div>
   );

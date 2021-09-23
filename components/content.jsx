@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import Image from 'next/image';
-import styles from './content.module.css';
+import styles from './css/content.module.css';
 
 export default function Content({
   h1Txt, pTxt, imgTest,

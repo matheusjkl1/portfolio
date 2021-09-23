@@ -10,8 +10,8 @@ import bannerPic from '../images/arts/contact.png';
 import gitIco from '../images/icons/git.png';
 import linkedinIco from '../images/icons/linkedin.png';
 import gitConnectIco from '../images/icons/gitConnect.png';
-import stylesPages from './pages.module.css';
-import styles from './contact.module.css';
+import stylesPages from './css/pages.module.css';
+import styles from './css/contact.module.css';
 import 'bulma/css/bulma.css';
 
 export default function Contact() {
@@ -61,9 +61,8 @@ export default function Contact() {
       emailjs.sendForm('service_mn3y3lp', 'template_fsul75a', form.current, 'user_hVWFEWOWxHsweqfO53huf')
         .then((result) => {
           setFormState(resultSendForm('notification is-primary is-light', result.text));
-          setTimeout(() => { setFormState(null); }, 6000);
+          setTimeout(() => { setFormState(null); }, 4000);
         }, (error) => {
-          console.log(error);
           setFormState(resultSendForm('notification is-danger is-light', error.text));
           setTimeout(() => { setFormState(null); }, 6000);
         });
@@ -82,71 +81,81 @@ export default function Contact() {
               Me Contate
             </h1>
           )}
-          pTxt={<p>📪 📫 📬 📭</p>}
+          pTxt={(
+            <div>
+              <p>
+                se você acha que eu seria uma boa opção,
+                envie-me uma mensagem com alguns detalhes sobre.
+              </p>
+              <p>📪 📫 📬 📭</p>
+            </div>
+          )}
           imgTest={bannerPic}
         />
       )}
       />
-      <section className={`box ${styles.contactSectionContent} is-variable is-1-mobile is-0-tablet is-3-desktop is-8-widescreen is-2-fullhd`}>
-        <a href="https://github.com/matheusjkl1" target="_blank" rel="noreferrer">
-          <figure className="image is-64x64 column">
-            <Image src={gitIco} />
-          </figure>
-          <p>GitHub</p>
-        </a>
-        <a href="https://www.linkedin.com/in/matheusmendes16/" target="_blank" rel="noreferrer">
-          <figure className="image is-64x64 column">
-            <Image src={linkedinIco} />
-          </figure>
-          <p>Linkedin</p>
-        </a>
-        <a href="https://gitconnected.com/matheusjkl1/resume" target="_blank" rel="noreferrer">
-          <figure className="image is-64x64 column">
-            <Image src={gitConnectIco} />
-          </figure>
-          <p>Curriculo</p>
-        </a>
-      </section>
       <main className={`box ${styles.contactMainContent}`}>
-        <h1>Deseja me enviar um Email?</h1>
-        <form className="box" ref={form} onSubmit={sendEmail}>
-          <label className="label">
-            <input
-              type="text"
-              name="user_name"
-              placeholder="name"
-              className={`input ${inputClassName.name}`}
-              onChange={updateName}
-              onBlur={validateName}
-            />
-          </label>
-          <label className="label">
-            <input
-              type="email"
-              name="user_email"
-              placeholder="email"
-              className={`input ${inputClassName.email}`}
-              onChange={updateEmail}
-              onBlur={validateEmail}
-            />
-          </label>
-          <label className="label">
-            <textarea
-              name="message"
-              className="textarea input is-hovered"
-              placeholder="Digite sua mensagem"
-            />
-          </label>
-          <label className="label">
-            <input
-              type="submit"
-              value="Send"
-              className="button is-black"
-              disabled={inputClassName.name !== 'is-success' || inputClassName.email !== 'is-success'}
-            />
-          </label>
-        </form>
-        {formState || null}
+        <section className={`${styles.contactSectionContentForms}`}>
+          <h1>Deseja me enviar um Email?</h1>
+          <form ref={form} onSubmit={sendEmail}>
+            <label className="label">
+              <input
+                type="text"
+                name="user_name"
+                placeholder="name"
+                className={`input ${inputClassName.name}`}
+                onChange={updateName}
+                onBlur={validateName}
+              />
+            </label>
+            <label className="label">
+              <input
+                type="email"
+                name="user_email"
+                placeholder="email"
+                className={`input ${inputClassName.email}`}
+                onChange={updateEmail}
+                onBlur={validateEmail}
+              />
+            </label>
+            <label className="label">
+              <textarea
+                name="message"
+                className="textarea input is-hovered"
+                placeholder="Digite sua mensagem"
+              />
+            </label>
+            <label className="label">
+              <input
+                type="submit"
+                value="Send"
+                className="button is-black"
+                disabled={inputClassName.name !== 'is-success' || inputClassName.email !== 'is-success'}
+              />
+            </label>
+          </form>
+          {formState || null}
+        </section>
+        <section className={`${styles.contactSectionContent} is-variable is-1-mobile is-0-tablet is-3-desktop is-8-widescreen is-2-fullhd`}>
+          <a href="https://github.com/matheusjkl1" target="_blank" rel="noreferrer">
+            <figure className="image is-64x64 column">
+              <Image src={gitIco} />
+            </figure>
+            <p>GitHub</p>
+          </a>
+          <a href="https://www.linkedin.com/in/matheusmendes16/" target="_blank" rel="noreferrer">
+            <figure className="image is-64x64 column">
+              <Image src={linkedinIco} />
+            </figure>
+            <p>Linkedin</p>
+          </a>
+          <a href="https://gitconnected.com/matheusjkl1/resume" target="_blank" rel="noreferrer">
+            <figure className="image is-64x64 column">
+              <Image src={gitConnectIco} />
+            </figure>
+            <p>Curriculo</p>
+          </a>
+        </section>
       </main>
     </div>
   );
