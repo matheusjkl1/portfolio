@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { api, apiUrl } from '../services/api';
 import Loading from './loading';
-import styles from './projectCard.module.css';
+import styles from './css/projectCard.module.css';
 
 export default function projectCard() {
   const [projects, setPorjects] = useState([]);

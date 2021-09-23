@@ -4,7 +4,7 @@ import Banner from '../components/banner';
 import Content from '../components/content';
 import bannerPic from '../images/arts/project.png';
 import Card from '../components/projectCard';
-import stylesPages from './pages.module.css';
+import stylesPages from './css/pages.module.css';
 import 'bulma/css/bulma.css';
 
 export default function Projects() {
@@ -18,7 +18,14 @@ export default function Projects() {
               Meus Projetos
             </h1>
           )}
-          pTxt={<p>🤖 👨‍💻 🤖 👨‍💻 🤖 👨‍💻 🤖 👨‍💻 </p>}
+          pTxt={(
+            <p>
+              uma vez que meu tempo é dividido entre algumas
+              coisas diferentes, não sou capaz de realizar
+              todos os projetos que gostaria, mas estou
+              sempre procurando um trabalho diferente e divertido.
+            </p>
+        )}
           imgTest={bannerPic}
         />
       )}

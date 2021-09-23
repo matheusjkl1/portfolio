@@ -10,8 +10,8 @@ import bannerPic from '../images/arts/contact.png';
 import gitIco from '../images/icons/git.png';
 import linkedinIco from '../images/icons/linkedin.png';
 import gitConnectIco from '../images/icons/gitConnect.png';
-import stylesPages from './pages.module.css';
-import styles from './contact.module.css';
+import stylesPages from './css/pages.module.css';
+import styles from './css/contact.module.css';
 import 'bulma/css/bulma.css';
 
 export default function Contact() {
@@ -61,9 +61,8 @@ export default function Contact() {
       emailjs.sendForm('service_mn3y3lp', 'template_fsul75a', form.current, 'user_hVWFEWOWxHsweqfO53huf')
         .then((result) => {
           setFormState(resultSendForm('notification is-primary is-light', result.text));
-          setTimeout(() => { setFormState(null); }, 6000);
+          setTimeout(() => { setFormState(null); }, 4000);
         }, (error) => {
-          console.log(error);
           setFormState(resultSendForm('notification is-danger is-light', error.text));
           setTimeout(() => { setFormState(null); }, 6000);
         });
@@ -82,7 +81,15 @@ export default function Contact() {
               Me Contate
             </h1>
           )}
-          pTxt={<p>📪 📫 📬 📭</p>}
+          pTxt={(
+            <div>
+              <p>
+                se você acha que eu seria uma boa opção,
+                envie-me uma mensagem com alguns detalhes sobre.
+              </p>
+              <p>📪 📫 📬 📭</p>
+            </div>
+          )}
           imgTest={bannerPic}
         />
       )}

@@ -1,0 +1,164 @@
+.homeArticle {
+  margin-top: 5em;
+}
+
+.aboutMainContent {
+  margin-top: 5em;
+  min-height: 30em;
+  margin-bottom: 4em;
+}
+
+.aboutMainContent h1 {
+  font-weight: 800;
+  font-family: 'Rubik', -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  font-size: 1.9em;
+  margin-top: var(--spacing-m);
+  padding: 8px;
+}
+
+.aboutMainContent p {
+  font-size: 1em;
+  margin-top: var(--spacing-m);
+  padding: 8px;
+  font-family: 'Rubik', -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+}
+
+.aboutSectionLikeThings {
+  text-align: center;
+  font-size: 0.7em;
+  padding: 2em;
+}
+
+.aboutSectionLikeThings h1 {
+  padding: 1em;
+}
+
+.aboutSectionLikeThings p {
+  padding: 1em;
+  font-size: 1.5em;
+}
+
+.aboutSectionLikeThingsImages {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+  min-height: 20em;
+}
+
+@media screen and (max-width: 460px) {
+  .aboutSectionLikeThingsImages {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+
+.joinJob {
+  margin-bottom: 1em;
+}
+
+.joinJob p {
+  padding-left: 2em;
+}
+
+.stacks {
+  text-align: center;
+  font-size: 0.7em;
+}
+
+.stacksImages {
+  justify-content: center;
+  display: flex;
+}
+
+.stacksImages figure img{
+  padding: 1em;
+  height: 65px;
+  width: 65px;
+}
+
+.stacksImages figure{
+  height: 65px;
+  width: 65px;
+}
+
+.professionalExperiences {
+  display: flex;
+  padding: 2em;
+}
+
+.professionalExperiences figure {
+  padding: 10px;
+  min-width: 96px;
+}
+
+.professionalExperiences h2 {
+  font-family: 'Rubik', -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  font-size: large;
+  font-weight: bold;
+}
+
+.professionalExperiences p {
+  font-style: italic;
+  font-family: 'Rubik', -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+}
+
+.professionalExperiences div {
+  display: flex;
+  flex-direction: column;
+}
+
+.certifications {
+  text-align: center;
+}
+
+.certifications h1 {
+  text-align: center;
+  font-family: 'Rubik', -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  font-size: 22.28px;
+  font-weight: bold;
+
+}
+
+.aboutSectionCertificatesImages {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.aboutSectionCertificatesImages img {
+  padding: 1em;
+}
+
+@media screen and (max-width: 580px) {
+  .aboutSectionCertificatesImages {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  .stacksImages {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+}
+
+@media screen and (max-width: 900px) {
+  .stacksImages {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+}
+
