@@ -46,17 +46,6 @@
   min-height: 20em;
 }
 
-@media screen and (max-width: 460px) {
-  .aboutSectionLikeThingsImages {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    padding-top: 1em;
-    padding-left: 1em;
-    padding-right: 1em;
-  }
-}
-
 .joinJob {
   margin-bottom: 1em;
 }
@@ -92,8 +81,10 @@
 }
 
 .professionalExperiences figure {
-  padding: 10px;
-  min-width: 96px;
+  align-self: center;
+  margin-bottom: 20px;
+  min-width: 126px;
+  padding: 6px;
 }
 
 .professionalExperiences h2 {
@@ -136,6 +127,18 @@
 }
 
 @media screen and (max-width: 580px) {
+  .aboutSectionLikeThingsImages {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  .aboutSectionLikeThingsImages figure img {
+  }
+
   .aboutSectionCertificatesImages {
     align-items: center;
     display: flex;
@@ -149,6 +152,11 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+  }
+
+  .professionalExperiences figure {
+    align-self: start;
+    min-width: 126px;
   }
   
 }

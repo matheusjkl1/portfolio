@@ -38,6 +38,8 @@ export default function Home() {
           <a href={trybeLink} target="_blank" rel="noreferrer"> Trybe</a>
           , para me tornar um
           desenvolvedor Web Full Stack.
+        </p>
+        <p>
           Você pode ler um pouco mais sobre mim
           <a href="/about"> aqui.</a>
         </p>
