@@ -126,6 +126,22 @@
   padding: 1em;
 }
 
+@media screen and (max-width: 620px) {
+  .professionalExperiences {
+    flex-direction: column;
+    flex-wrap: no-wrap;
+  }
+  .professionalExperiences div {
+    float: right;
+  }
+
+  .professionalExperiences figure img {
+    align-self: start;
+    max-width: 1px;
+    float: left;
+  }
+}
+
 @media screen and (max-width: 580px) {
   .aboutSectionLikeThingsImages {
     align-items: center;
@@ -135,10 +151,6 @@
     padding-left: 1em;
     padding-right: 1em;
   }
-
-  .aboutSectionLikeThingsImages figure img {
-  }
-
   .aboutSectionCertificatesImages {
     align-items: center;
     display: flex;

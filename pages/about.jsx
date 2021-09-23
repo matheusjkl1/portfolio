@@ -45,6 +45,20 @@ export default function About() {
             e desde muito cedo tive contato com tecnologia,
             com Video Games, internet e etc...
           </p>
+          <p>
+            Em 2017 entrei para Faculdade, no curso de logística
+            trabalhei na área durante 4 anos, mas sentia que faltava algo,
+            tenho um carinho pela área pois lá adquiri muitos
+            conhecimentos sobre gestão de projetos e pessoas.
+          </p>
+          <p>
+            Em 2019 após me formar decidi mudar para Santo André, ABC Paulista,
+            pouco tempo depois que cheguei a Pandemia aconteceu, e mudou diversos planos,
+            em outubro de 2020 eu descobri a Trybe
+            e um mês depois consegui passar no processo seletivo
+            e ingressei na área de Desenvolvimento, no qual eu tenho me encontrado e aperfeiçoado
+            cada vez mais os meus pontos fortes que são Resiliência e Dedicação.
+          </p>
           <section className={styles.aboutSectionLikeThings}>
             <h1>Aqui estão algumas coisas que gosto</h1>
             <section className={styles.aboutSectionLikeThingsImages}>
