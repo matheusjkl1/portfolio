@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
+import Head from 'next/head';
 import Navbar from '../components/navbar';
 import Banner from '../components/banner';
 import Content from '../components/content';
@@ -13,6 +14,10 @@ export default function Home() {
 
   return (
     <div className={`container ${stylesPages.body}`}>
+      <Head>
+        <link rel="icon" type="image/png" sizes="16x16" href="../public/favicon.ico" />
+        <meta name="theme-color" content="#ffffff" />
+      </Head>
       <Navbar path="/" />
       <Banner bannerContent={(
         <Content
