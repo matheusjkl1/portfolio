@@ -6,7 +6,7 @@ import 'bulma/css/bulma.css';
 
 export default function Create() {
   const [loginState, setLoginState] = useState({
-    name: '', gitUrl: '', sinopse: '', file: '', url: '',
+    name: '', gitUrl: '', sinopse: '', file: '', url: '', stacks: '',
   });
   // const [file, setFile] = useState('');
   const [data, setData] = useState([]);
@@ -28,6 +28,7 @@ export default function Create() {
     fd.append('url', loginState.url);
     fd.append('gitUrl', loginState.gitUrl);
     fd.append('sinopse', loginState.sinopse);
+    fd.append('stacks', loginState.stacks);
     api
       .post('/projects', fd,
         {
@@ -79,6 +80,16 @@ export default function Create() {
             id="sinopse"
             name="sinopse"
             placeholder="Sinopse do Projeto"
+            onChange={handleChange}
+          />
+        </label>
+        <label htmlFor="stacks" className="label">
+          <input
+            className="input is-success"
+            type="text"
+            id="stacks"
+            name="stacks"
+            placeholder="Tecnologias Utilizadas"
             onChange={handleChange}
           />
         </label>

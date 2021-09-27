@@ -4,7 +4,7 @@ import Head from 'next/head';
 import Navbar from '../components/navbar';
 import Banner from '../components/banner';
 import Content from '../components/content';
-import bannerPic from '../images/arts/home.png';
+import bannerPic from '../images/arts/home.jpg';
 import 'bulma/css/bulma.css';
 import styles from './css/home.module.css';
 import stylesPages from './css/pages.module.css';

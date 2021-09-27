@@ -6,7 +6,7 @@ import emailjs from 'emailjs-com';
 import Navbar from '../components/navbar';
 import Banner from '../components/banner';
 import Content from '../components/content';
-import bannerPic from '../images/arts/contact.png';
+import bannerPic from '../images/arts/contact.jpg';
 import gitIco from '../images/icons/git.png';
 import linkedinIco from '../images/icons/linkedin.png';
 import gitConnectIco from '../images/icons/gitConnect.png';

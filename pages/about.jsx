@@ -4,7 +4,7 @@ import Image from 'next/image';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Navbar from '../components/navbar';
 import Banner from '../components/banner';
-import bannerPic from '../images/arts/about.png';
+import bannerPic from '../images/arts/about.jpg';
 import animePic from '../images/things like/anime.jpg';
 import pcPic from '../images/things like/pc.jpeg';
 import animalPic from '../images/things like/animais1.jpg';

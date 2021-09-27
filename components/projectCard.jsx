@@ -17,8 +17,11 @@ export default function projectCard() {
       console.log(error);
     }
   }, []);
+
+  console.log(projects);
+
   return (
-    <section className={`box ${styles.cardMainContent}`}>
+    <section className={`${styles.cardMainContent}`}>
       {projects.length <= 0 ? <Loading />
         : (
           <div
@@ -27,47 +30,36 @@ export default function projectCard() {
           >
             {
             projects.map((project) => (
-              <div className="card project-card" key={uuidv4()}>
-                <div className="card-image project-card">
-                  <figure className="image project-card">
-                    <img
-                      src={`${apiUrl}${project.img}`}
-                      alt={project.name}
-                    />
-                  </figure>
-                </div>
-                <div className="card-content">
-                  <div className="media">
-                    <div className="media-left">
-                      <figure className="image is-48x48">
-                        <img
-                          src={`${apiUrl}${project.img}`}
-                          alt={project.name}
-                        />
-                      </figure>
-                    </div>
-                    <div className="media-content">
-                      <p className="title is-4">{project.name}</p>
-                      <a href={project.url} target="_blank" rel="noreferrer">
-                        <p className="subtitle is-6">
-                          <span className="tag is-link is-light">Url do Projeto:</span>
-                          &nbsp;&nbsp;
-                          {project.url}
-                        </p>
-                      </a>
-                      <a href={project.gitUrl} target="_blank" rel="noreferrer">
-                        <p className="subtitle is-6">
-                          <span className="tag is-link is-light">Url do repositorio:</span>
-                          &nbsp;&nbsp;
-                          {project.gitUrl}
-                        </p>
-                      </a>
-                    </div>
-                  </div>
-
-                  <div className="content">
+              <div className={`box ${styles.cardProject}`} key={uuidv4()}>
+                <figure className="image">
+                  <img
+                    src={`${apiUrl}${project.img}`}
+                    alt={project.name}
+                  />
+                  <p>
                     {project.sinopse}
+                  </p>
+                </figure>
+                <div className={styles.cardProjectSinopse}>
+                  <div>
+                    <h1>{project.name}</h1>
+                    <section className="tag is-link is-light">
+                      <a href={project.url} target="_blank" rel="noreferrer">
+                        <p>Url do Projeto</p>
+                      </a>
+                    </section>
+                    <section className="tag is-link is-light">
+                      <a href={project.gitUrl} target="_blank" rel="noreferrer">
+                        <p>Url do Repositorio</p>
+                      </a>
+                    </section>
                   </div>
+                  <h2>
+                    <b>Tecnologias Utilizadas:</b>
+                  </h2>
+                  <h2>
+                    {project.stacks}
+                  </h2>
                 </div>
               </div>
             ))
