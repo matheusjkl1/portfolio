@@ -55,19 +55,25 @@ export default function Contact() {
   };
 
   const sendEmail = (e) => {
-    try {
+    if (data.name !== '' && data.email !== '') {
+      try {
+        e.preventDefault();
+        setFormState(resultSendForm('notification is-warning is-light', 'Enviando...'));
+        emailjs.sendForm('service_mn3y3lp', 'template_fsul75a', form.current, 'user_hVWFEWOWxHsweqfO53huf')
+          .then((result) => {
+            setFormState(resultSendForm('notification is-primary is-light', result.text));
+            setTimeout(() => { setFormState(null); }, 4000);
+          }, (error) => {
+            setFormState(resultSendForm('notification is-danger is-light', error.text));
+            setTimeout(() => { setFormState(null); }, 6000);
+          });
+      } catch (error) {
+        setFormState(resultSendForm('notification is-danger is-light', 'Ocorreu algum Erro...'));
+        setTimeout(() => { setFormState(null); }, 6000);
+      }
+    } else {
       e.preventDefault();
-      setFormState(resultSendForm('notification is-warning is-light', 'Enviando...'));
-      emailjs.sendForm('service_mn3y3lp', 'template_fsul75a', form.current, 'user_hVWFEWOWxHsweqfO53huf')
-        .then((result) => {
-          setFormState(resultSendForm('notification is-primary is-light', result.text));
-          setTimeout(() => { setFormState(null); }, 4000);
-        }, (error) => {
-          setFormState(resultSendForm('notification is-danger is-light', error.text));
-          setTimeout(() => { setFormState(null); }, 6000);
-        });
-    } catch (error) {
-      setFormState(resultSendForm('notification is-danger is-light', 'Ocorreu algum Erro...'));
+      setFormState(resultSendForm('notification is-danger is-light', 'Nome ou Email não preenchido'));
       setTimeout(() => { setFormState(null); }, 6000);
     }
   };
@@ -103,6 +109,7 @@ export default function Contact() {
                 type="text"
                 name="user_name"
                 placeholder="name"
+                maxLength="40"
                 className={`input ${inputClassName.name}`}
                 onChange={updateName}
                 onBlur={validateName}
@@ -113,6 +120,7 @@ export default function Contact() {
                 type="email"
                 name="user_email"
                 placeholder="email"
+                maxLength="50"
                 className={`input ${inputClassName.email}`}
                 onChange={updateEmail}
                 onBlur={validateEmail}
@@ -121,6 +129,7 @@ export default function Contact() {
             <label className="label">
               <textarea
                 name="message"
+                maxLength="500"
                 className="textarea input is-hovered"
                 placeholder="Digite sua mensagem"
               />
