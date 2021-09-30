@@ -24,6 +24,8 @@ export default function Projects() {
               coisas diferentes, não sou capaz de realizar
               todos os projetos que gostaria, mas estou
               sempre procurando um trabalho diferente e divertido.
+              Aos poucos estou adicionando meus projetos, mas a maioria
+              ainda esta no meu github.
             </p>
         )}
           imgTest={bannerPic}
