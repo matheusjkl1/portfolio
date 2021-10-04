@@ -49,18 +49,17 @@ export default function projectCard() {
 
   return (
     <section className={`box ${styles.cardMainContent}`}>
-      <div
-        key={uuidv4()}
-        className={styles.cardMainContentColumn}
-      >
-        {projectsFront.length <= 0 ? <Loading />
-          : (
-            <div
-              key={uuidv4()}
-              className={styles.ColumnDiv}
-            >
-              <h1>Front-End</h1>
-              {
+      {projectsFront.length <= 0 && projectsBack.length <= 0 ? <Loading /> : (
+        <div
+          key={uuidv4()}
+          className={styles.cardMainContentColumn}
+        >
+          <div
+            key={uuidv4()}
+            className={styles.ColumnDiv}
+          >
+            <h1>Front-End</h1>
+            {
               projectsFront.map(({
                 id, img, name, sinopse, url, gitUrl, stacks,
               }) => (
@@ -80,38 +79,35 @@ export default function projectCard() {
                 </button>
               ))
             }
-            </div>
-          )}
-        {projectsBack.length <= 0 ? <Loading />
-          : (
-            <div
-              key={uuidv4()}
-              className={styles.ColumnDiv}
-            >
-              <h1>Back-End</h1>
-              {
-              projectsBack.map(({
-                id, img, name, sinopse, url, gitUrl, stacks,
-              }) => (
-                <button
-                  className={`box ${styles.cardProjectShowButton}`}
-                  type="button"
-                  onMouseEnter={() => getIndex(id)}
-                  onMouseLeave={() => getIndex(id)}
-                >
-                  {hide[id] ? (
-                    <ProjectCardColumns
-                      projectProps={{
-                        id, img, name, sinopse, url, gitUrl, stacks,
-                      }}
-                    />
-                  ) : (projectsColumn(img, name))}
-                </button>
-              ))
-            }
-            </div>
-          )}
-      </div>
+          </div>
+          <div
+            key={uuidv4()}
+            className={styles.ColumnDiv}
+          >
+            <h1>Back-End</h1>
+            {
+            projectsBack.map(({
+              id, img, name, sinopse, url, gitUrl, stacks,
+            }) => (
+              <button
+                className={`box ${styles.cardProjectShowButton}`}
+                type="button"
+                onMouseEnter={() => getIndex(id)}
+                onMouseLeave={() => getIndex(id)}
+              >
+                {hide[id] ? (
+                  <ProjectCardColumns
+                    projectProps={{
+                      id, img, name, sinopse, url, gitUrl, stacks,
+                    }}
+                  />
+                ) : (projectsColumn(img, name))}
+              </button>
+            ))
+          }
+          </div>
+        </div>
+      )}
     </section>
   );
 }

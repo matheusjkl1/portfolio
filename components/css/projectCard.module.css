@@ -27,6 +27,8 @@
 
 .cardProjectShowButton {
   max-width: 500px;
+  min-width: 500px;
+  min-height: 340px;
   border: none;
   padding: 3em;
 }
@@ -85,6 +87,11 @@
     flex-direction: column;
     text-align: center;
   }
+
+  .ColumnDiv {
+    max-width: 70%;
+  }
+
   .cardMainContentColumn {
     align-items: center;
     flex-direction: column;
@@ -95,5 +102,32 @@
   }
   .cardProjectShowButton {
     margin-top: 15px;
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 340px;
+    border: none;
+    padding: 3em;
+  }
+}
+
+@media screen and (max-width: 1410px) {
+  .cardProjectShowButton {
+    margin-top: 15px;
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 340px;
+    border: none;
+    padding: 3em;
+  }
+}
+
+@media screen and (max-width: 1200) {
+  .cardProjectShowButton {
+    margin-top: 15px;
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 340px;
+    border: none;
+    padding: 3em;
   }
 }
