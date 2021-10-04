@@ -5,30 +5,30 @@ import Navbar from '../components/navbar';
 import 'bulma/css/bulma.css';
 
 export default function Create() {
-  const [loginState, setLoginState] = useState({
-    name: '', gitUrl: '', sinopse: '', file: '', url: '', stacks: '',
+  const [projectForm, setProjectForm] = useState({
+    name: '', gitUrl: '', sinopse: '', file: '', url: '', stacks: '', type: 'Front',
   });
-  // const [file, setFile] = useState('');
   const [data, setData] = useState([]);
 
   const handleChange = ({ target }) => {
     const { name, value } = target;
-    setLoginState({ ...loginState, [name]: value });
+    setProjectForm({ ...projectForm, [name]: value });
   };
 
   const fileSelectedHandle = ({ target }) => {
     const { name, files } = target;
-    setLoginState({ ...loginState, [name]: files[0] });
+    setProjectForm({ ...projectForm, [name]: files[0] });
   };
 
   const createProject = async () => {
     const fd = new FormData();
-    fd.append('name', loginState.name);
-    fd.append('file', loginState.file);
-    fd.append('url', loginState.url);
-    fd.append('gitUrl', loginState.gitUrl);
-    fd.append('sinopse', loginState.sinopse);
-    fd.append('stacks', loginState.stacks);
+    fd.append('name', projectForm.name);
+    fd.append('file', projectForm.file);
+    fd.append('url', projectForm.url);
+    fd.append('gitUrl', projectForm.gitUrl);
+    fd.append('sinopse', projectForm.sinopse);
+    fd.append('stacks', projectForm.stacks);
+    fd.append('type', projectForm.type);
     api
       .post('/projects', fd,
         {
@@ -108,6 +108,10 @@ export default function Create() {
           value="Cadastrar Projeto"
           onClick={createProject}
         />
+        <select name="type" id="type" value={projectForm.type} onChange={handleChange}>
+          <option value="Front">Front</option>
+          <option value="Back">Back</option>
+        </select>
       </form>
       <div>
         {data}
