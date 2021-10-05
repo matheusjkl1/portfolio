@@ -48,8 +48,8 @@ export default function About() {
           <p>
             Em 2017 entrei para Faculdade, no curso de logística
             trabalhei na área durante 4 anos, mas sentia que faltava algo,
-            tenho um carinho pela área pois lá adquiri muitos
-            conhecimentos sobre gestão de projetos e pessoas.
+            tenho um carinho pela área pois lá adquiri muito
+            conhecimento sobre gestão de projetos e pessoas.
           </p>
           <p>
             Em 2019 após me formar decidi mudar para Santo André, ABC Paulista,
