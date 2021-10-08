@@ -39,7 +39,7 @@ export default function Home() {
         <p>
           Iniciei minha carreira na área de logística,
           mas sempre fui apaixonado por Tecnologia.
-          Em 2021 entrei para a
+          Em 2020 entrei para a
           <a href={trybeLink} target="_blank" rel="noreferrer"> Trybe</a>
           , para me tornar um
           desenvolvedor Web Full Stack.
