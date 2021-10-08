@@ -81,7 +81,7 @@ export default function About() {
           <h1>Você quer que trabalhemos juntos?</h1>
           <p>
             A área que iniciei como Desenvolvedor Júnior é Desenvolvimento Web,
-            mas também consigo desenvolver para Mobile, utilizando Reac Native.
+            mas também consigo desenvolver para Mobile, utilizando React Native.
             Preocupo-me profundamente com os usuários, desempenho,
             acessibilidade e como tudo funciona.
           </p>
