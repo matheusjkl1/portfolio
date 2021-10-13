@@ -29,10 +29,11 @@ export default function projectCard() {
 
   const getIndex = (id) => {
     setHide((previHide) => ({
-      ...previHide,
+      // ...previHide,
       [id]: !previHide[id],
     }));
   };
+  console.log(hide);
 
   const projectsColumn = (img, name) => (
     <div key={uuidv4()} className={styles.cardProjectHide}>
@@ -43,7 +44,7 @@ export default function projectCard() {
         />
       </figure>
       <h1>{name}</h1>
-      <h4>passe o mouse para mais detalhes.</h4>
+      <h4>Clique para mais detalhes.</h4>
     </div>
   );
 
@@ -67,7 +68,7 @@ export default function projectCard() {
                   className={`box ${styles.cardProjectShowButton}`}
                   type="button"
                   onMouseEnter={() => getIndex(id)}
-                  onMouseLeave={() => getIndex(id)}
+                  onMouseLeave={hide[id] ? () => getIndex(id) : null}
                 >
                   {hide[id] ? (
                     <ProjectCardColumns
@@ -93,7 +94,7 @@ export default function projectCard() {
                 className={`box ${styles.cardProjectShowButton}`}
                 type="button"
                 onMouseEnter={() => getIndex(id)}
-                onMouseLeave={() => getIndex(id)}
+                onMouseLeave={hide[id] ? () => getIndex(id) : null}
               >
                 {hide[id] ? (
                   <ProjectCardColumns
