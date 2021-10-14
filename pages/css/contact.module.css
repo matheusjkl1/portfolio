@@ -103,6 +103,10 @@
   .contactSectionContentForms {
     border: none;
   }
+
+  .contactSectionContentForms h1{
+    margin-bottom: 10px;
+  }
   
   .contactSectionContent a{
     color: inherit;
