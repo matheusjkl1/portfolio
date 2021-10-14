@@ -61,7 +61,10 @@
 }
 
 .contactSectionContent a{
+  align-items: center;
   color: inherit;
+  display: flex;
+  flex-direction: column;
   text-align: center;
 }
 
